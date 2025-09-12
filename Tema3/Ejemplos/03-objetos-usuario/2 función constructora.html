@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: Logic</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function Persona(nombre, apellido, fechaNac) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.anioNac = fechaNac;
+            this.mascota = new Mascota("perro");
+            const addmascota = function (tipo){
+                return new Mascota (tipo);
+            }
+            this.mascota2= addmascota("gato");
+            this.getFechaNac = function () {
+                return this.anioNac;
+            }
+        }
+
+        function Mascota (tipo){
+            this.tipomascota=tipo;
+        }
+
+        //creamos una instancia del objeto Persona
+        const p1 = new Persona('Pepe', 'Pérez', 1975);
+
+        console.log(p1);
+        console.log(p1.getFechaNac());
+        console.log(p1.toString());
+
+
+    </script>
+</body>
+
+</html>

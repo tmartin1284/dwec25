@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con numbers
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    const num1 = 4;
+    const num2 = 20;
+    const str1 = "algo";
+    
+    //typeof
+
+    console.log(typeof num1);  //number
+  
+    //NaN
+   
+    const mult =  num1 * str1;
+    console.log(mult);   //NaN
+    console.log(typeof mult);   //number
+
+    //Infinity
+
+    const division = 45 / 0;
+    console.log(division);    //Infinity, que es un número
+    console.log(typeof division);   //number
+  
+    //isNaN()
+    
+    const numberstring = "30";
+    const string = "20 años";
+ //mult = num1 * str1;   --> 4 * "algo"
+    console.log(isNaN(mult));  //true
+    console.log(isNaN(division));   //falso , en realidad es infinity
+
+
+    console.log(isNaN("12"));  //falso, es una cadena
+    console.log(typeof "12")   //string, poque va comillas
+    console.log(isNaN(12));   //falso, es un numero
+    console.log(isNaN(numberstring)); //falso, es una cadena que se puede convertir a numero
+    console.log(isNaN(string)); //true, porque no se puede convertir a numero
+    console.log(isNaN(NaN)); // nan es un nan
+
+    //toString
+
+    const number = 100;
+    console.log(number);  //100
+    console.log(number.toString());  //"100" --> ojo es una cadena
+    console.log(typeof number);   //number
+    console.log(typeof number.toString());  //string
+
+    //toFixed
+
+    const total = 234.541556;
+    console.log(total.toFixed(2));  //lo redondea a dos decimales
+ 
+    </script>
+</body>
+</html>
