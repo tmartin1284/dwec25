@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          <!-- Bootstrap CSS v5.2.1 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+
+               <script type="text/javascript">
+
+                    let numeroPositivo = 4;
+                    let numeroNegativo = -30;
+                    console.log("Número positivo: " + numeroPositivo);
+                    console.log("Número negativo: " + numeroNegativo);
+
+
+
+                    let entero = 34;
+                    let puntoFlotante = 34.4;
+                    let cero = 0;
+                    let flotanteNegativo = -9.45;
+                    let numeroGrande = 150000000;
+
+                    numeroGrande = "Tomas";
+                    console.log("Número entero: " + entero);
+                    console.log("Número de punto flotante: " + puntoFlotante);
+                    console.log("Número cero: " + cero);
+                    console.log("Número de punto flotante negativo: " + flotanteNegativo);
+                    console.log("Número grande: " + numeroGrande);
+
+
+                    let suma = 4 + 5; // 9
+                    let resta = 10 - 3; // 7
+                    let producto = 4 * 3; // 12
+                    let cociente = 12 / 4; // 3
+
+                    let potencia = 2 ** 3; // 8
+
+                    console.log("Suma: " + suma);
+                    console.log("Resta: " + resta);
+                    console.log("Producto: " + producto);
+                    console.log("Cociente: " + cociente);
+                    console.log("Potencia: " + potencia);
+
+                    let contador = 0;
+                    contador++; // el contador ahora es 1
+                    console.log("Contador: " + contador);
+                    contador--; // el contador ahora es 0
+
+                    console.log("Contador: " + contador);
+
+                    console.log("Contador post incrementado: " + contador++);
+                    console.log("Contador: " + contador);
+                    console.log("Contador pre incrmentado: " + ++contador);
+
+
+
+                    //ejemplos de numeros
+
+                    console.log("comparaciones: ");
+                    let esMenorQue = 5 < 10; // true
+                    let esMayorQue = 10 > 5; // true
+                    let esMenorOIgualQue = 5 <= 5; // true
+                    let esMayorOIgualQue = 10 >= 10; // true
+                    let esIgual = 5 == "5"; // true (coerción de tipos)
+                    let esEstrictamenteIgual = 5 === 5; // true
+                    let esDistinto = 5 != "5"; // false (coerción de tipos)
+
+                    console.log("5 < 10: " + esMenorQue);
+                    console.log("10 > 5: " + esMayorQue);
+                    console.log("5 <= 5: " + esMenorOIgualQue);
+                    console.log("10 >= 10: " + esMayorOIgualQue);
+                    console.log("5 == '5': " + esIgual);
+                    console.log("5 === 5: " + esEstrictamenteIgual);
+                    console.log("5 != '5': " + esDistinto);
+
+
+
+
+
+                    let esEstrictamenteIgualConTiposDiferentes = 5 === "5"; // false (sin coerción de tipos)
+
+                    let esEstrictamenteDistinto = 5 !== "5"; // true (sin coerción de tipos)
+
+                    console.log("5 === '5': " + esEstrictamenteIgualConTiposDiferentes);
+                    console.log("5 !== '5': " + esEstrictamenteDistinto);
+
+
+
+                    //operadores
+
+
+
+                    // Tipo de la variable
+                    let tipoDeNumero = typeof 123; // 'number'
+                    let tipoDeCadena = typeof "123"; // 'string'
+                    console.log("Tipo de 123: " + tipoDeNumero);
+                    console.log("Tipo de '123': " + tipoDeCadena);
+
+                    // NaN (No es un número)
+                    let noEsUnNumero = NaN;
+                    let chequeoNaN1 = isNaN(-12.3); // false
+                    let chequeoNaN2 = isNaN('12.3 '); // true
+                    let chequeoNaN3 = isNaN("Hola"); // true
+
+                    console.log("Chequeo NaN con 123: " + chequeoNaN1);
+                    console.log("Chequeo NaN con '123': " + chequeoNaN2
+                    );
+                    console.log("Chequeo NaN con 'Hola': " + chequeoNaN3)
+
+                    let variable1 = 456, variable2 = '789';
+
+                    console.log(isNaN(variable1)); // false
+
+                    console.log(isNaN(variable2)); // true  
+                    console.log("Suma de variable1 + variable2: " + (variable1 + variable2)); // '456789'
+                    console.log("Resta de variable2 + variable1: " + (variable2 + variable1));
+                    console.log("Suma de variable1 + variable2: " + (variable1 - variable2)); // '456789'
+                    console.log("Resta de variable2 + variable1: " + (variable2 - variable1));
+
+
+
+                    // Convertir número a cadena
+                    let numeroACadena = (123).toString(); // '123'
+
+                    // Formatear número a decimales fijos
+                    let decimalFijo = (123.456).toFixed(2); // '123.46'
+
+
+
+
+               </script>
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Libraries -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+               integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>

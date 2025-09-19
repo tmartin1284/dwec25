@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          <!-- Bootstrap CSS v5.2.1 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+                    // Características de las cadenas
+                    let cadena1 = "Hola mundo";
+                    let cadena2 = "Hola mundo";
+
+                    console.log(cadena1);
+                    console.log(cadena2);
+                    // Concatenación
+                    let saludo = "Hola" + " mundo"; // 'Hola mundo'
+
+                    console.log(saludo);
+
+                    // Operaciones de Comparación
+                    let esIgual = "Hola" == "Hola"; // true
+                    let esEstrictamenteIgual = "Hola" === "Hola"; // true
+                    let esEstrictamenteIgual2 = "123" === 132; // false
+                    let esDistinto = "Hola" != "Mundo"; // true
+
+                    console.log("Es igual: " + esIgual);
+                    console.log("Es estrictamente igual: " + esEstrictamenteIgual);
+                    console.log("Es estrictamente igual 2: " + esEstrictamenteIgual2);
+                    console.log("Es distinto: " + esDistinto);
+
+                    // Otros métodos útiles
+                    let longitudDeCadena = saludo.length; // 10
+                    let enMayusculas = saludo.toUpperCase(); // 'HOLA MUNDO'
+                    let enMinusculas = saludo.toLowerCase(); // 'hola mundo'
+                    let incluyePalabra = saludo.includes("mundo"); // true
+                    let dividirCadena = saludo.split(" "); // ['Hola', 'mundo']
+                    console.log("longitud de la cadena: " + longitudDeCadena);
+                    console.log("cadena en mayusculas: " + enMayusculas);
+                    console.log("cadena en minusculas: " + enMinusculas);
+                    console.log("dividir cadena: " + dividirCadena);
+                    console.log("longitud de la cadena dividida: " + dividirCadena.length);
+                    console.log("longitud de la primera palabra: " + dividirCadena[0].length);
+                    console.log("longitud de la segunda palabra: " + dividirCadena[1].length);
+
+
+                    let subCadena = saludo.substring(3, 6); // 'ola '  substring(inicio, fin+1)
+                    let caracterEn = saludo.charAt(1); // 'o'
+                    let indiceDelCaracter = saludo.indexOf("m"); // 5
+                    let cadenaReemplazada = saludo.replace("mundo", "todos"); // 'Hola todos'
+                    let cadenaRecortada = "   Hola mundo   ".trim(); // 'Hola mundo'
+
+                    let String = "Esto es una cadena con template string, y puedo incluir \n variables como: y también expresiones \n  como 2 + 2 = .";
+
+                    console.log(String);
+
+                    let templateString = `Esto es una cadena con template string, y puedo incluir 
+variables como: ${saludo} y también expresiones
+ como 2 + 2 = ${2 + 2}.`;
+                    console.log(templateString);
+
+                    console.log("Subcadena: " + subCadena);
+                    console.log(`subcadena usando template string: ${cadena1}`);
+                    console.log("Caracter en posición 1: " + caracterEn);
+                    console.log("Índice del caracter 'm': " + indiceDelCaracter);
+                    console.log("Cadena reemplazada: " + cadenaReemplazada);
+                    console.log("Cadena recortada: '" + cadenaRecortada + "'");
+
+
+                    let nombre = "Juan";
+                    let apellido = "Pérez";
+                    let edad = 30;
+                    let presentacion = `Mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`;
+                    let presentacion2 = "Mi nombre es " + nombre + " " + apellido + " y tengo " + edad + " años.";
+                    let resultado = `2 + 2 es ${2 + 2}`; // "2 + 2 es 4"
+
+
+                    console.log(presentacion);
+                    console.log(resultado);
+                    console.log(typeof presentacion); // "string"
+                    console.log(presentacion.length); // "string"
+                    console.log(presentacion.toLocaleUpperCase()); // "string"
+
+
+
+
+               </script>
+
+
+
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Libraries -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+               integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>
