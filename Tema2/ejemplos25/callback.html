@@ -35,26 +35,28 @@
 
                     //de aqui para arriba es un componente                 
                     //--------------------------------------------------------------------------------------------
-                    //de aqui para abajo es otro componente        
+                    //de aqui para abajo es otro componente  
+                    let atributo = undefined;
                     // Función B (función callback)
                     function B(argumento) {
-                         console.log("Función callback B ejecutada" + argumento);
+
+                         console.log("Función callback B ejecutada " + argumento);
                     }
 
                     // Llama a la función A y pasa la función B como callback
                     //  A(B);
                     function C(argumento) {
-                         console.log("Función callback C ejecutada" + argumento);
+                         atributo = argumento.toUpperCase();
+                         console.log("Función callback C ejecutada " + atributo);
 
                     }
 
 
-                    setcallback(C);
-                    setcallback(B);
+
 
                     setInterval(() => {
                          setcallback(C);
-                    }, 2500);
+                    }, 2100);
 
                     setInterval(() => {
                          setcallback(B);
