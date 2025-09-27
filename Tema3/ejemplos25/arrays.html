@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          <!-- Bootstrap CSS v5.2.1 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+                    /*
+                                        const a1 = new Array(); // Nuevo array vacío
+                                        console.log(a1.length); // Salida: 0
+                    
+                                        const a2 = new Array(4); // Nuevo array con 4 elementos
+                                        console.log(a2.length); // Salida: 4
+                    
+                                        a2[0] = "hola";
+                                        a2[1] = 88888;
+                                        a2[2] = 9999;
+                                        a2[3] = "sevilla";
+                                        a2[4] = 44444; // Fuera de los límites, no se añade
+                                        a2[40] = 44444;
+                    
+                    
+                                        for (let i = 0; i < a2.length; i++) {
+                                             console.log(a2[i]);
+                                        }
+                    
+                    
+                                        console.log(a2.length);
+                    
+                                        // Nuevo array con 3 elementos definidos
+                                        const artist = new Array('Michael Jackson', 'Taylor Swift', 'David Bowie', 'Shakira', 'Izan');
+                                        console.log(artist.length); // Salida: 3
+                    
+                                        for (let i = 0; i < artist.length; i++) {
+                                             console.log(artist[i]);
+                                        }
+                                        // Rellenar a1 con valores aleatorios
+                                        for (let i = 0; i < 10; i++) {
+                                             a1[i] = Math.random();
+                                        }
+                    
+                                        console.log(a1.length); // Salida: 10
+                                        console.log(a2.length); // Salida: 4
+                                        console.log(artist.length); // Salida: 3
+                                        console.log(a1);
+                                        console.log(a2);
+                                        console.log(artist);
+                    
+                                        // */
+
+
+                    const artist2 = ['Michael Jackson', 'Taylor Swift', 'David Bowie', 'Shakira', 'Izan'];
+
+                    console.log(artist2.length); // Salida: 3
+                    console.log(artist2); // Salida: ["Michael Jackson", "Taylor Swift", "David Bowie"]
+                    console.log(artist2[0]); // Salida: Michael Jackson
+
+
+
+
+
+
+                    const fruits = ["Apple", "Banana", "Cherry", "Date"];
+
+                    for (let i = 0; i < fruits.length; i++) {
+                         console.log(fruits[i]);
+                    }
+                    // Salida:
+                    // Apple
+                    // Banana
+                    // Cherry
+                    // Date
+
+
+                    for (const fruit of fruits) {
+                         console.log(fruit);
+                    }
+
+
+
+
+                    fruits.forEach(
+                         (fruit, i, frutas) => {
+                              console.log(` ${i} : ${fruit}`);
+                         }
+                    );
+
+
+                    Array.prototype.primero = function () {
+                         return this[0];
+                    };
+                    Array.prototype.cuarto = function () {
+                         return this[3];
+                    };
+
+                    console.log(fruits.primero()); // Salida: Apple
+                    console.log(artist2.primero()); // Salida: Michael Jackson
+                    console.log(fruits.cuarto()); // 
+                    console.log(artist2.cuarto()); //
+
+               </script>
+
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Libraries -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+               integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>

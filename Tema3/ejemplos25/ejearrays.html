@@ -18,42 +18,48 @@
                <!-- place navbar here -->
           </header>
           <main>
+
                <script>
-                    //sfdasdfafasdf 
 
-                    /*
-                    asdfasdf
-                    
-                    */
+                    function Numero(n) {
+                         this.valor = n;
+                         this.asignar = (n) => this.valor = n;
 
-                    let a;
-                    let b = null;
-                    let c = 5;
-                    console.log(a); // Salida: undefined
-                    console.log(b); // Salida: null
-                    console.log(c); // Salida: 5  
-                    c = undefined;
-                    console.log(c); // Salida: undefined   
-                    c = "hola";
-                    console.log(typeof c); // Salida: boolean
-                    console.log(c.length); // Salida: 4
-                    console.log(c); // Salida: true
+                    }
+                    Numero.prototype.toString = function () {
+                         console.log(this.valor);
+                    }
+
+                    const array = [new Numero(1), new Numero(2), new Numero(3), new Numero(4), new Numero(5)];
+
+                    array.forEach((x) => {
+                         console.log(`${x.valor} : ${x.valor * x.valor} `);
+                    });
 
 
+                    const cuadrados = array.map((x) => {
+                         return new Numero(x.valor * x.valor);
+                    });
 
-                    // Ejemplo de Undefined
-                    let x;
-                    console.log(x); // Salida: undefined
+                    console.log(array);
+                    console.log(cuadrados);
 
-                    // Ejemplo de Null
-                    let y = null;
-                    console.log(y); // Salida: null
+                    const pares = array.filter((x) => {
+                         if (x.valor % 2 == 0)
+                              return x
+                    });
 
-                    // Verificación de tipos
-                    console.log(typeof x); // Salida: undefined
-                    console.log(typeof y); // Salida: object
+                    console.log(array);
+                    console.log(pares);
+                    console.log(cuadrados);
+                    array[1].asignar(20);
+                    pares[1].asignar(40);
+                    console.log(pares);
+                    console.log(array);
+                    console.log(cuadrados);
 
-                    console.log(Boolean(x));
+
+
 
 
                </script>

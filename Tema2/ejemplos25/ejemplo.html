@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          <!-- Bootstrap CSS v5.2.1 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+
+                    function add(a, b) {
+                         //debugger; // La ejecución se detendrá aquí
+                         //si las herramientas de desarrollo están abiertas
+                         return a + b;
+                    }
+                    console.log(add(2, 3));
+
+
+                    /*
+                                        var globalVar = "Soy accesible desde cualquier lugar en el script";
+                                        console.log(innerVar); // Error de referencia no capturado: functionVar no está definida
+                    
+                                        if (true) {
+                                             var innerVar = "Soy accesible solo dentro de esta función";
+                                             console.log("dentro del bloque"); // Muestra: string
+                                             console.log(globalVar); // Muestra: Soy accesible desde cualquier lugar en el script
+                                             console.log(innerVar); // Muestra: Soy accesible solo dentro de esta función
+                                        }
+                                        console.log("fuera del bloque"); // Muestra: string
+                    
+                                        console.log(globalVar); // Muestra: Soy accesible desde cualquier lugar en el script
+                                        console.log(innerVar); // Error de referencia no capturado: functionVar no está definida
+                    
+                    */
+/*
+                    function testLet() {
+                         let blockVar = "Soy accesible solo dentro de este bloque";
+                         if (true) {
+                              let innerBlockVar = "Soy accesible solo dentro de este bloque interno";
+                              console.log(blockVar); // Muestra: Soy accesible solo dentro de este bloque
+                              console.log(innerBlockVar); // Muestra: Soy accesible solo dentro de este bloque interno
+                         }
+                         console.log(blockVar); // Muestra: Soy accesible solo dentro de este bloque
+                         //console.log(innerBlockVar);  // Error de referencia no capturado: innerBlockVar no está definida
+                    }
+
+                    testLet();
+                    */add
+                    function testConst() {
+                         const constantVar = "Soy una constante dentro de este bloque";
+                         if (true) {
+                              const innerConstantVar = "Soy una constante dentro de este bloque interno";
+                              console.log(constantVar); // Muestra: Soy una constante dentro de este bloque
+                              console.log(innerConstantVar); // Muestra: Soy una constante dentro de este bloque interno
+                         }
+                         console.log(constantVar); // Muestra: Soy una constante dentro de este bloque
+                         /// console.log(innerConstantVar);  // Error de referencia no capturado: innerConstantVar no está definida
+                         constantVar = "Nuevo valor";  // Error de tipo no capturado: Asignación a una variable constante.
+                    }
+
+                    testConst();
+
+               </script>
+
+
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Libraries -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+               integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>
