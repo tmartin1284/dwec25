@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          <!-- Bootstrap CSS v5.2.1 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+                    // Crear un objeto vacío usando el constructor Object
+                    const myCar = new Object();
+
+                    // Añadir propiedades al objeto
+                    myCar.make = "Ford";
+                    myCar.model = "Mustang";
+                    myCar.year = 1969;
+                    myCar.colour = "red";
+                    myCar.passengers = 4;
+
+                    // Acceder a las propiedades
+                    console.log(`Make: ${myCar.make} Model: ${myCar.model} Year: ${myCar.year} Color: ${myCar.colour} Passengers: ${myCar.passengers}`);
+
+                    myCar.model = "Escort";
+                    console.log(`Make: ${myCar.make} Model: ${myCar.model} Year: ${myCar.year} Color: ${myCar.color} Passengers: ${myCar.passengers}`);
+
+
+
+
+                    // Crear un objeto con notación literal
+                    const myCar2 = {
+                         make: 'Seat',
+                         model: '600',
+                         year: '1965',
+                         color: 'blanco',
+                         arrancar: function () { return ('brum brum'); }
+                    }
+
+                    // Acceder a las propiedades
+                    console.log(`Make: ${myCar2.make} Model: ${myCar2.model} ${myCar2.arrancar()}`);
+
+
+
+
+                    // Definir una función constructora
+                    function Person(firstName, lastName, age) {
+                         this.firstName = firstName;
+                         this.lastName = lastName;
+                         this.age = age;
+                         this.greet = function () {
+                              console.log("Hello, " + this.firstName + " " + this.lastName);
+                         };
+                    }
+
+                    // Crear instancias del objeto Person
+                    const person1 = new Person("John", "Doe", 30);
+                    const person2 = new Person("Jane", "Smith", 25);
+
+                    // Acceder a las propiedades y llamar a los métodos
+                    console.log(person1.firstName); // Salida: John
+                    person1.greet(); // Salida: Hello, John Doe
+
+                    console.log(person2.firstName); // Salida: Jane
+                    person2.greet(); // Salida: Hello, Jane Smith
+
+
+
+                    // Definir un array de objetos (array de coches)
+                    let cars = [
+                         { brand: "Toyota", model: "Corolla", year: 2020 },
+                         { brand: "Honda", modelo: "Civic", year: 2019 },
+                         { brand: "Ford", model: "Mustang", year: 2021 }
+                    ];
+
+                    // Acceder a los objetos en el array
+                    console.log(cars[0]); // Salida: { brand: "Toyota", model: "Corolla", year: 2020 }
+
+                    // Añadir un nuevo objeto al array
+                    cars.push({ brand: "Tesla", model: "Model S", year: 2022 });
+
+                    // Modificar un objeto en el array
+                    cars[1].year = 2020;
+
+                    // Eliminar un objeto del array
+                    cars.splice(2, 1); // Elimina el objeto en el índice 2
+
+                    // Iterar sobre el array de objetos
+                    cars.forEach(function (car) {
+                         console.log(`${car.brand} ${car.model ? car.model : ""} (${car.year})`);
+                    });
+               </script>
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Libraries -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+               integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>
