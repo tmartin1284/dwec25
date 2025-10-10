@@ -48,6 +48,9 @@ if (oldLink) {
 }
 document.head.appendChild(link);
 /*
+
+//versión de codigo del año pasao
+
 const rowCard = document.getElementsByClassName("row")[0]; //de 0, poqeue nos devuelve un array
 let colCardModelo = rowCard.childNodes[0];
 console.log(rowCard.childNodes);
@@ -68,17 +71,39 @@ for (let personaje of personajes) {
   colCard.getElementsByTagName("h4")[0].innerHTML = UpperFirst(personaje);
   rowCard.appendChild(colCard);
 }
-
+*/
 let audio = document.createElement("audio");
 audio.setAttribute("src", "./img/musica.mp3");
 audio.setAttribute("loop", true);
 audio.setAttribute("controls", false);
 audio.setAttribute("autoplay", true);
 //document.getElementsByTagName("footer")[1].appendChild(audio);
-*/
+
 let cards = document.getElementsByClassName("card");
 let tarjeta = cards[0].parentElement;
 let fila = tarjeta.parentElement;
+
+/**
+ * El error. si os fijais, las funciones getElementsByXXXXName devuelven un array de elementos del dom
+ * pero ese array no es parte del DOM, de hecho es un htlm colection, pero no un elemento del dom.
+ * al intentar acceder a su parentElement, da error, porque no es un elemento del dom
+ * la solución es coger un elemento del array, que si es parte del DOM, y luego su parentElement,
+ * que también es parte del DOM
+ *
+ *
+ *
+ * En el código de más abajo, cogemos desde una parte de la tarjeta y vamos subiendo hasta que
+ * conseguimos la tarjeta completa, y de esta tarjeta, la fila donde se deben meter las tarjetas.
+ * hacemos una navegación ascendente
+ *
+ *
+ * En el codigo de arriba (comentado), lo hacemos al reves. Buscamos la fila, y de la fila, vamos bajando hasta las tarjetas
+ * navegando hacia abajo en los child nodes. El problema uqe nos encontramos aqui, es que los child nodes,
+ * pueden ser de cualquier tipo, incluso text nodes, que son los espacios en blanco entre los elementos del dom
+ * y por eso, tenemos que filtrar cuando bajamos, para asegurarnos que lo que hemos encontrado es un div,
+ * que es lo que nos interesa
+ *
+ */
 
 console.log(tarjeta);
 console.log(fila);
