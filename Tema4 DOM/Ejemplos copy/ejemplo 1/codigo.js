@@ -60,7 +60,7 @@ for (let i = 0; i < imagenes.length; i++) {
   let hermano = imagenes[i].nextElementSibling;
   let primos = hermano.childNodes;
 
-  console.log(primos);
+  //console.log(primos);
 
   for (let j = 0; j < primos.length; j++) {
     if (primos[j].className === "card-title")
@@ -84,6 +84,24 @@ for (let i = 0; i < imagenes.length; i++) {
   if (nuevo) hermano.appendChild(nuevo);
   if (copia) hermano.appendChild(copia);
 }
+
+/*
+en este ejeplo, hamos buscado las imagenes por tagName. Proque si hacemos un getElementsByClassTagName("div") nos devolvería demasiados
+otra opcción es recuperar los cards y luego buscar la imagen dentro de cada card 
+y lo podemos hacer con el className "card"
+*/
+
+let cards = document.getElementsByClassName("card");
+
+console.log(document.getElementsByTagName("img"));
+console.log(document.getElementsByTagName("p"));
+for (let card of cards) {
+  //cuidado con el for of el for in no funciona
+  //console.log(card.outerHTML);
+  console.log(card.getElementsByTagName("img"));
+  console.log(card.getElementsByTagName("p"));
+}
+
 //=======================================================
 
 const a = document.createElement("a");
