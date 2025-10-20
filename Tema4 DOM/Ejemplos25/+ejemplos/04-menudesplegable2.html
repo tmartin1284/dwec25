@@ -30,10 +30,15 @@
             #menu li ul {
                 background: #E4ADFF;
                 display: none;
+                margin-left: 20px;
+                padding: 5px;
+                border: 1px solid #999;
+                border: 2px solid red;
             }
 
             .mostrar {
                 display: block;
+                background-color: yellow;
             }
         </style>
     </head>
@@ -94,7 +99,6 @@
             //podemos hacerlo accediendo a las funciones de la propiedad classList, por ejemplo 
             //el.classList.toggle("clase"); 
 
-
             const enlaces = document.querySelectorAll('#menu > ul > li > a');
 
             enlaces.forEach(enlace => {
@@ -106,13 +110,6 @@
                     console.log(enlace.nextElementSibling);
 
 
-                    /*    const submenues = enlace.nextElementSibling.querySelectorAll('li ul');
-                        console.log(submenues);
-                        submenues.forEach(opcion => {
-                            console.log(opcion);
-                            opcion.classList.toggle('mostrar');
-                        })
-    */
 
                 });
             });
