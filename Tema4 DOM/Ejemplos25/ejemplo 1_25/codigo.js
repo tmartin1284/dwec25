@@ -10,6 +10,7 @@ const personajes = [
   "cell",
   "chau",
   "cichi",
+  "dabra",
   "freezer",
   "gohan",
   "goku",

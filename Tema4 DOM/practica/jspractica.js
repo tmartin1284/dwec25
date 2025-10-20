@@ -8,7 +8,7 @@
  * Escribir vuestro código en la función procesarJSON
  */
 
-fetch("./data/team.json")
+fetch("./heros.json")
   .then((response) => {
     return response.json();
   })
@@ -63,6 +63,9 @@ function procesarJSON(jsondata) {
   });
 
   //tu codigo aqui
+
+  //------
+  //codigo para crear un html estatico con lo que hemos creado con el dom
 
   const a = document.createElement("a");
   //cuidadiinn joorrlll, que estamos con un literal de cadena

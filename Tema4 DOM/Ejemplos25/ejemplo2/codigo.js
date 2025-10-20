@@ -9,9 +9,9 @@ fetch("./data/team.json")
   .then((response) => {
     return response.json();
   })
-  .then((jsondata) => procesarJSON(jsondata));
+  .then((jsondata) => patatasfritasconarroz(jsondata));
 
-function procesarJSON(jsondata) {
+function patatasfritasconarroz(jsondata) {
   /**
    * aqui empezamos a procesar el json 
    * y a crear los objetos que necesito para mostrar los datos
@@ -38,10 +38,11 @@ function procesarJSON(jsondata) {
       y eliminamos la plantilla del padre, porque la vamos a procesar despues en un for
       guardamos el padre, que es contenedor en el que vamos a meter todas las tarjetas
    */
-
+let escudoDefault = "https://via.placeholder.com/150?text=Sin+Escudo";
   let plantilla = document.getElementById("plantilla"); //en teoria lo recuperamos aqui, HABRÍA QUE CONTROLAR QUE SI NO ENCUENTRA NADA.....
   let contenedor = plantilla.parentNode;
   contenedor.removeChild(plantilla);
+  debugger;
 
   for (data in jsondata.teams) {
     let equipo = jsondata.teams[data];
@@ -56,14 +57,22 @@ function procesarJSON(jsondata) {
 
     tarjeta.setAttribute("id", "equipo_" + equipo.id);
     console.log(tarjeta.outerHTML);
+     {
+  
+      let propiedad = document.getElementById("imagen"); //cuidao, voy a utilizar propiedad como una variable para guardar todos los elementos que recupere
+      propiedad.setAttribute("id", "imagen_" + equipo.id);
+       if (equipo.escudo) propiedad.setAttribute("src", equipo.escudo);
+      else propiedad.setAttribute("src", escudoDefault);
+    
 
-    let propiedad = document.getElementById("imagen"); //cuidao, voy a utilizar propiedad como una variable para guardar todos los elementos que recupere
-    propiedad.setAttribute("id", "imagen_" + equipo.id);
-    propiedad.setAttribute("src", equipo.escudo);
+
 
     propiedad = document.getElementById("nombre");
     propiedad.setAttribute("id", "nombre_" + equipo.id);
     propiedad.childNodes[0].nodeValue = equipo.nombre;
+
+
+
     //propiedad.firstchild.nodeValue(equipo.nombre);  //y esto peta... manda cojones
 
     /**cambiamos los identificadores de los desplegables, de todos.
@@ -125,4 +134,48 @@ function procesarJSON(jsondata) {
       );
     }
   }
+
+
+
+
+
+  //--------------------------------------------------------------
+  //y por ultimo, creamos un enlace para descargar el html que hemos creado
+  const a = document.createElement("a");
+  //cuidadiinn joorrlll, que estamos con un literal de cadena
+  const archivo = new Blob(
+    [
+      `
+<!doctype html>
+<html lang="en">
+` +
+        document.head.outerHTML +
+        `
+
+
+
+
+<!-- Todo lo que viene ahora lo has creado tu solit@ con javascript y jugando con el DOM
+     y esto solo la punta del iceberg de todo lo que vas a crear!!!
+     venga! vamos a por ello  -->
+
+
+
+
+
+
+
+
+` +
+        document.body.outerHTML +
+        `
+</html>`,
+    ],
+    { type: "html" }
+  );
+  const url = URL.createObjectURL(archivo);
+  a.href = url;
+  a.download = "statico.html";
+  a.innerHTML = "descarga el htlm que has creado con js y el dom";
+  document.getElementsByTagName("footer")[0].appendChild(a);
 }

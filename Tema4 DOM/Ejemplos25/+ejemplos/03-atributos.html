@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <img class="card-img-top" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Seleccionar varios checkbox y marcarlos</h4>
                     <p class="card-text">Tenemos que hacer en JS una función que invoquemos para marcar todas las
@@ -58,22 +58,24 @@
         <script>
             window.addEventListener("load", e => {
 
-                const publi1 = document.getElementById("acepta2");
-                console.log(publi1);
-                console.log(publi1.attributes);
-                for (attrib of publi1.attributes) {
-                    console.log(attrib);
-                    console.log(attrib.nodeName);
-                    console.log(attrib.nodeName);
-                    console.log(attrib.nodeType);
-                }
+                const publi1 = document.querySelectorAll("label .form-check-input");
+                publi1.forEach(boton => {
+                    console.log(boton);
+                    console.log(boton.attributes);
+                    for (attrib of boton.attributes) {
+                        console.log(attrib);
+                        console.log(attrib.nodeName);
+                        console.log(attrib.nodeName);
+                        console.log(attrib.nodeType);
+                    }
 
-                const valuePubli1 = publi1.getAttribute("type");
-                console.log(valuePubli1);
-                publi1.setAttribute("checked", 1);
-                // publi1.removeAttribute("checked");
+                    const valuePubli1 = boton.getAttribute("type");
+                    console.log(valuePubli1);
+                    boton.setAttribute("checked", 1);
+                    // publi1.removeAttribute("checked");
 
 
+                });
             });
 
 
