@@ -14,14 +14,11 @@ function procesarJSON(jsondata) {
   let contenedor = plantilla.parentNode;
   contenedor.removeChild(plantilla);
   const heroes = jsondata.data.results;
+  /*
 
-  heroes.forEach((hero, pos) => {
-    let card = plantilla.cloneNode(true);
-    card.setAttribute("id", `id_${hero.id}`);
-    contenedor.appendChild(card);
 
-    //que hacemos con cada tarjeta
-  });
+aqui metemos el codigo para crear las tarjetas de los heroes
+*/
 
   /*
 
