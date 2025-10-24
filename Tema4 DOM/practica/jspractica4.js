@@ -12,7 +12,7 @@ function procesarJSON(jsondata) {
 
   let plantilla = document.getElementById("plantilla");
   let contenedor = plantilla.parentNode;
-  contenedor.removeChild(plantilla);
+  //contenedor.removeChild(plantilla);
   const heroes = jsondata.data.results;
   /*
 

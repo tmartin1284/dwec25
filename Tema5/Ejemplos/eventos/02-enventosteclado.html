@@ -2,35 +2,35 @@
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>formulario</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>formulario</title>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
-    window.onload = function () {
-      document.onkeyup = muestraInformacion;
-      document.onkeypress = muestraInformacion;
-      document.onkeydown = muestraInformacion;
-    }
+      window.onload = function () {
+        document.onkeyup = muestraInformacion;
+        document.onkeypress = muestraInformacion;
+        document.onkeydown = muestraInformacion;
+      }
 
-    function muestraInformacion(elEvento) {
-      var evento = window.event || elEvento;
+      function muestraInformacion(elEvento) {
+        var evento = window.event || elEvento;
 
-      var mensaje = "Tipo de evento: " + evento.type + "<br>" +
-        "Propiedad keyCode: " + evento.keyCode + "<br>" +
-        "Propiedad charCode: " + evento.charCode + "<br>" +
-        "Carácter pulsado: " + evento.key;
+        var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+          "Propiedad keyCode: " + evento.keyCode + "<br>" +
+          "Propiedad charCode: " + evento.charCode + "<br>" +
+          "Carácter pulsado: " + evento.key;
 
-      info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-    }
+        info.innerHTML = mensaje + "<br>--------------------------------------<br>" + info.innerHTML
+      }
 
-  </script>
+    </script>
 
-<body>
+  <body>
 
-  <div id="info"></div>
+    <div id="info"></div>
 
-</body>
+  </body>
 
 </html>
