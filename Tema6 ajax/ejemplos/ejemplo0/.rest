@@ -8,3 +8,24 @@ GET http://localhost:3000/posts/ HTTP/1.1
 
 DELETE http://localhost:3000/posts/189 HTTP/1.1
 content-type: application/json
+
+### 
+GET https://pokeapi.co/api/v2
+
+
+
+
+### 
+GET https://pokeapi.co/api/v2/pokemon/pikachu
+
+### 
+GET https://pokeapi.co/api/v2/pokemon?limit=10
+
+### 
+GET https://pokeapi.co/api/v2/ability/overgrow
+
+### 
+GET https://pokeapi.co/api/v2/type/fire
+
+### 
+GET https://pokeapi.co/api/v2/generation/1

@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "5b77",
+      "generation-tomas": {
+        "icons": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/132.png",
+          "front_female": null
+        }
+      }
+    },
+    {
+      "id": "0bc2",
+      "generation-d": {
+        "icons": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/132.png",
+          "front_female": null
+        }
+      }
+    },
+    {
+      "id": "0bc2",
+      "generation-d": {
+        "icons": {
+          "front_default": "localhost",
+          "front_female": null
+        }
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "anothddddddddddddder comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "3",
+      "text": "Izan se bueno",
+      "postId": "ssss1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
