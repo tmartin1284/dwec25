@@ -12,8 +12,12 @@ content-type: application/json
 ### 
 GET https://pokeapi.co/api/v2
 
+###
+GET http://www.ies-azarquiel.es/paco/apikl/teams
 
 
+### 
+GET https://pokeapi.co/api/v2/pokedex/
 
 ### 
 GET https://pokeapi.co/api/v2/pokemon/pikachu
